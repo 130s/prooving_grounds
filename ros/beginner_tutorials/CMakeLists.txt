@@ -12,6 +12,8 @@ add_message_files(DIRECTORY msg
   #  FILES Num.msg Num.msg
 )
 
+add_message_files(DIRECTORY msg/subfolder1)
+
 generate_messages(
   DEPENDENCIES
   std_msgs
