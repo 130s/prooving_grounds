@@ -29,3 +29,6 @@ catkin_package(
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
+
+install(DIRECTORY script DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+install(DIRECTORY launch test DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

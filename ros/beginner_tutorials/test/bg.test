@@ -1,0 +1,11 @@
+<launch>
+  <include file="$(find beginner_tutorials)/launch/talker.launch" />
+
+  <test test-name="hztest_test" pkg="rostest" type="hztest" name="hztest1">
+    <param name="topic" value="chatter" />  
+    <param name="hz" value="10.0" />
+    <param name="hzerror" value="1.0" />
+    <param name="test_duration" value="2.0" />
+    <param name="wait_time" value="2.0" />
+  </test>
+</launch>
