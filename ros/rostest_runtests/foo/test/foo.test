@@ -1,0 +1,13 @@
+<launch>
+  <include file="$(find foo)/a.launch">
+    <arg name="conf_path" value="$(find foo)/config" />
+  </include>
+
+  <test pkg="rostest" type="paramtest" name="paramtest_nonempty"
+        test-name="param_calibration_version">
+    <param name="param_name_target" value="baa1/baa2" />
+    <param name="test_duration" value="3.0" />
+    <param name="wait_time" value="30.0" />
+  </test>
+
+</launch>

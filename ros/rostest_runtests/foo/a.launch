@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="conf_path" default="$(env HOME)/conf" />
+  <rosparam command="load" file="$(arg conf_path)/rsc.yaml" />
+</launch>
