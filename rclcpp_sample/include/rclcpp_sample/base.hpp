@@ -13,7 +13,7 @@ class BaseModules : public rclcpp::Node
 {
 public:
   /// Constructor
-  BaseModules(std::string nodename);
+  BaseModules(const std::string& nodename);
 
   ~BaseModules();
 

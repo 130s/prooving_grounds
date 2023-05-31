@@ -2,7 +2,7 @@
 
 using namespace rclcpp_sample;
 
-BaseModules::BaseModules(std::string nodename)
+BaseModules::BaseModules(const std::string& nodename)
     : Node(nodename)
 {
   RCLCPP_INFO(this->get_logger(), "Initialization.");

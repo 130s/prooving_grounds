@@ -2,7 +2,7 @@
 
 using namespace rclcpp_sample;
 
-DerivedModule::DerivedModule(std::string nodename)
+DerivedModule::DerivedModule(const std::string& nodename)
 : BaseModules(nodename)
 {
   RCLCPP_INFO(get_logger(), "Construtor of DerivedModule class.");

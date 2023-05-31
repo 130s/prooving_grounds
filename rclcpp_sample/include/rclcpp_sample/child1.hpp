@@ -11,7 +11,7 @@ namespace rclcpp_sample
 class DerivedModule : public BaseModules::BaseModules
 {
 public:
-  explicit DerivedModule(std::string nodename);
+  explicit DerivedModule(const std::string& nodename);
   ~DerivedModule();
 
   bool func_to_be_overridden();
