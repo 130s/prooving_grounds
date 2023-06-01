@@ -2,8 +2,9 @@
 
 using namespace rclcpp_sample;
 
-BaseModules::BaseModules(const std::string& nodename)
-    : Node(nodename)
+//BaseModules::BaseModules(const std::string& nodename)
+BaseModules::BaseModules()
+    : rclcpp::Node("base_app")
 {
   RCLCPP_INFO(this->get_logger(), "Initialization.");
 }

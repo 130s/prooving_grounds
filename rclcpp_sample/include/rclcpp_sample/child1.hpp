@@ -8,13 +8,14 @@
 namespace rclcpp_sample
 {
 
-class DerivedModule : public BaseModules::BaseModules
+class DerivedModule : public BaseModules
 {
 public:
-  explicit DerivedModule(const std::string& nodename);
-  ~DerivedModule();
+  //explicit DerivedModule(const std::string& nodename);
+  DerivedModule();
+  virtual ~DerivedModule();
 
-  bool func_to_be_overridden();
+  virtual bool func_to_be_overridden();
 };
 }  // namespace rclcpp_sample
 

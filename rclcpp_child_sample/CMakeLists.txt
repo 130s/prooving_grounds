@@ -7,7 +7,6 @@ endif()
 
 set(THIS_PACKAGE_INCLUDE_DEPENDS
   ament_cmake
-  ament_cmake_python
   rclcpp
   rclcpp_sample
 )
@@ -17,11 +16,10 @@ endforeach()
 
 set(app_derived app_derived)
 add_executable(${app_derived} src/exec.cpp)
-target_include_directories(${app_derived}
-  PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  PUBLIC $<INSTALL_INTERFACE:include>)
+#target_include_directories(${app_derived}
+#  PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#  PUBLIC $<INSTALL_INTERFACE:include>)
 ament_target_dependencies(${app_derived} ${THIS_PACKAGE_INCLUDE_DEPENDS})
-#target_link_libraries(${app_derived} hut_ariac_lib::FloorRobot)
 install(TARGETS ${app_derived} RUNTIME DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
