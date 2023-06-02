@@ -3,7 +3,7 @@
 
 #include <rclcpp_sample/shapes.hpp>
 
-using namespace rclcpp_sample;
+//using namespace rclcpp_sample;
 
 int main(int argc, char *argv[])
 {

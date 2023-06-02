@@ -86,6 +86,7 @@ add_executable(${GEEK_SHAPE} src/exec_shapes.cpp)
 target_include_directories(${GEEK_SHAPE}
   PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   PUBLIC $<INSTALL_INTERFACE:include>)
+target_link_libraries(${GEEK_SHAPE} ${GEEK_SHAPE_LIB})
 ament_target_dependencies(${GEEK_SHAPE} ${THIS_PACKAGE_INCLUDE_DEPENDS})
 install(TARGETS ${GEEK_SHAPE} RUNTIME DESTINATION lib/${PROJECT_NAME})
 

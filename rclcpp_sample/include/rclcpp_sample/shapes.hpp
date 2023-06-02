@@ -5,8 +5,7 @@
 #include <unistd.h>
 #include <string>
 
-namespace rclcpp_sample
-{
+//namespace rclcpp_sample{
 
 // Declaration of Base class
 class Shape
@@ -41,6 +40,6 @@ public:
   virtual ~Square();
 };
 
-}  // namespace rclcpp_sample
+//}  // namespace rclcpp_sample
 
 #endif  //RCLCPP_SAMPLE__SHAPES_HPP_

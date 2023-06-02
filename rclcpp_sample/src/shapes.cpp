@@ -6,7 +6,6 @@
 
 #include <rclcpp_sample/shapes.hpp>
 
-using namespace rclcpp_sample;
 using namespace std;
 
 // Declaration of Base class
