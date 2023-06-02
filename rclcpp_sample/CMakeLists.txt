@@ -34,6 +34,7 @@ target_include_directories(
 #target_link_libraries(${PROJECT_NAME} ${THIS_PACKAGE_INCLUDE_DEPENDS})    
 ament_target_dependencies(${PROJECT_NAME} ${THIS_PACKAGE_INCLUDE_DEPENDS})
 ament_export_include_directories(include)
+ament_export_targets(${PROJECT_NAME}Targets HAS_LIBRARY_TARGET)
 
 install(DIRECTORY include/
   DESTINATION include
@@ -67,7 +68,7 @@ target_include_directories(
     $<INSTALL_INTERFACE:include>)
 #target_link_libraries(${PROJECT_NAME} ${THIS_PACKAGE_INCLUDE_DEPENDS})    
 ament_target_dependencies(${GEEK_SHAPE_LIB} ${THIS_PACKAGE_INCLUDE_DEPENDS})
-#ament_export_include_directories(include)
+ament_export_include_directories(include)
 install(DIRECTORY include/
   DESTINATION include
 )
@@ -88,6 +89,6 @@ target_include_directories(${GEEK_SHAPE}
   PUBLIC $<INSTALL_INTERFACE:include>)
 target_link_libraries(${GEEK_SHAPE} ${GEEK_SHAPE_LIB})
 ament_target_dependencies(${GEEK_SHAPE} ${THIS_PACKAGE_INCLUDE_DEPENDS})
-install(TARGETS ${GEEK_SHAPE} RUNTIME DESTINATION lib/${PROJECT_NAME})
+install(TARGETS ${GEEK_SHAPE} RUNTIME DESTINATION lib/)
 
 ament_package()

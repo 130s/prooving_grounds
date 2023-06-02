@@ -10,15 +10,14 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
   rclcpp
   rclcpp_sample
 )
-foreach(dependency IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
-  find_package(${dependency} REQUIRED)
+foreach(dep IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
+  find_package(${dep} REQUIRED)
 endforeach()
+find_package(rclcpp_sample REQUIRED)
 
 set(app_derived app_derived)
 add_executable(${app_derived} src/exec.cpp)
-#target_include_directories(${app_derived}
-#  PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-#  PUBLIC $<INSTALL_INTERFACE:include>)
+target_link_libraries(${app_derived} rclcpp_sample::rclcpp_sample)
 ament_target_dependencies(${app_derived} ${THIS_PACKAGE_INCLUDE_DEPENDS})
 install(TARGETS ${app_derived} RUNTIME DESTINATION lib/${PROJECT_NAME})
 
