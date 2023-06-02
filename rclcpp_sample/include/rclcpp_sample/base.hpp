@@ -12,9 +12,7 @@ namespace rclcpp_sample
 class BaseModules : public rclcpp::Node
 {
 public:
-  /// Constructor
-//  BaseModules(const std::string& nodename);
-  BaseModules();
+  BaseModules(const std::string& nodename);
   virtual ~BaseModules();
 
   virtual bool func_to_be_overridden();

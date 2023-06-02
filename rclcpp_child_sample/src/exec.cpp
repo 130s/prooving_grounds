@@ -16,9 +16,10 @@ int main(int argc, char *argv[])
   //std::shared_ptr<rclcpp_sample::DerivedModule> app(new rclcpp_sample::DerivedModule("foo"));
   //std::shared_ptr<rclcpp_sample::DerivedModule> app(new rclcpp_sample::DerivedModule("foo"));
   //std::shared_ptr<rclcpp_sample::DerivedModule> app(new rclcpp_sample::DerivedModule());
-  auto app = std::make_shared<rclcpp_sample::DerivedModule>();
   //auto app = std::make_unique<rclcpp_sample::DerivedModule>();
   //auto app = rclcpp_sample::DerivedModule();
+  auto app = std::make_shared<rclcpp_sample::DerivedModule>("app_execo");
+  //auto app = std::make_shared<rclcpp_sample::DerivedModule>();
 
   rclcpp::executors::MultiThreadedExecutor executor;
   executor.add_node(app);

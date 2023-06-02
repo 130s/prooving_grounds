@@ -13,7 +13,6 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
 foreach(dep IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
   find_package(${dep} REQUIRED)
 endforeach()
-find_package(rclcpp_sample REQUIRED)
 
 set(app_derived app_derived)
 add_executable(${app_derived} src/exec.cpp)

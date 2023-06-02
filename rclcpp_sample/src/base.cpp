@@ -4,8 +4,8 @@
 using namespace rclcpp_sample;
 
 //BaseModules::BaseModules(const std::string& nodename)
-BaseModules::BaseModules() :
-    rclcpp::Node("base_app")
+BaseModules::BaseModules(const std::string& nodename) :
+    rclcpp::Node(nodename)
 {
   RCLCPP_INFO(this->get_logger(), "Initialization.");
 }
@@ -20,8 +20,8 @@ bool BaseModules::func_to_be_overridden()
   return false;
 }
 
-DerivedModule::DerivedModule() :
-    BaseModules()
+DerivedModule::DerivedModule(const std::string& nodename) :
+    BaseModules(nodename)
 {
   RCLCPP_INFO(get_logger(), "Construtor of DerivedModule class.");
 }
