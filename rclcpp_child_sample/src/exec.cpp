@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
   rclcpp::executors::MultiThreadedExecutor executor;
   executor.add_node(app);
   std::thread([&executor]() { executor.spin(); }).detach();
-  app->func_to_be_overridden();
+  RCLCPP_INFO(rclcpp::get_logger("exec_rclcpp_sample"),
+              "func_to_be_overridden: %d", app->func_to_be_overridden());
   rclcpp::shutdown();
 }
